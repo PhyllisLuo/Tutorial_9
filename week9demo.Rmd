@@ -45,6 +45,15 @@ data <- read.csv("Data/Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_
   filter(Offence.Division == "A Crimes against the person")
 ```
 
+```{r graph}
+ggplot(data, 
+       aes(x = Year,
+           y = Incidents.Recorded)) +
+  geom_line()+
+  ggtitle("Graph for a crime against the person")
+  theme_bw()
+```
+
 
 \clearpage
 
