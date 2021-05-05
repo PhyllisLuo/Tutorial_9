@@ -48,9 +48,10 @@ Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019 %>%
          "incident" = 'Incidents Recorded',
          "rate" = 'Rate per 100,000 population') %>% 
   filter(offence_division == "B Property and deception offences") %>% 
-  group_by(offence_subdivision) %>% 
-  summarise(incident_sum = sum(incident, na.rm = TRUE),
+  group_by(Year) %>% 
+  summarise(incident_mean = mean(incident, na.rm = TRUE),
             rate_mean = mean(rate, na.rm = TRUE))
+  
 ```
 
 
