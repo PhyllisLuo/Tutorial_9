@@ -35,6 +35,16 @@ header-includes:
 
 # Section 1
 
+```{r library}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r loading-data}
+data <- read.csv("Data/Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv") %>% 
+  filter(Offence.Division == "A Crimes against the person")
+```
+
 
 \clearpage
 
